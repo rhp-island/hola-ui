@@ -1,4 +1,5 @@
 import { Plugin } from '@vue/runtime-core'
+import defaultTheme from '@hola-ui/theme'
 import { ThemeOverride, extendTheme } from './extend-theme'
 
 interface ExtendIconsPath {
@@ -17,9 +18,12 @@ interface HolaUIVuePluginOptions {
 
 const HolaUIVuePlugin: Plugin = {
   install(app, options: HolaUIVuePluginOptions = {}) {
-    app.config.globalProperties.$holaTheme = options.extendTheme
+    const theme = options.extendTheme || defaultTheme
+    app.config.globalProperties.$holaTheme = theme
+    app.provide('$holaTheme', theme)
   },
 }
 
+export interface ThemeProviderProps extends ThemeOverride {}
 export default HolaUIVuePlugin
 export { extendTheme }

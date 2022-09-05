@@ -8,14 +8,16 @@
 </template>
 
 <script lang="js">
-  import { defineComponent } from '@vue/runtime-core'
+  import { defineComponent, inject } from '@vue/runtime-core'
   import Sidebar from './components/Sidebar.vue'
   import stories from './.generated/routes.json'
   export default defineComponent({
     components: { Sidebar },
     setup() {
+      const holaTheme = inject('$holaTheme')
       return {
         stories,
+        holaTheme
       }
     },
   })

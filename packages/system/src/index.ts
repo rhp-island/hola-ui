@@ -5,30 +5,36 @@ import { css as _css, cx } from '@emotion/css'
 import { css } from '@hola-ui/styled-system'
 import theme from '@hola-ui/theme'
 
+let id = 0
+
 /**
  * Creates a Hola UI Vue component
  * @param tag Tag
- * @param componentProps Component Props
+ * @param componentName Component name
  */
-// @ts-ignore
+// @ts-expect-error
 export const hola: IHolaFactory = (
   tag: DOMElements,
-  componentProps = {}
+  componentName?: string
 ): any => {
+  // Increment ids
+  id++
+
   return defineComponent({
     inheritAttrs: false,
-    props: componentProps,
     setup(props, { slots, attrs }) {
+      // Separate component style attributes from raw HTML attributes
       const { class: inheritedClass, ...rest } = attrs
       const { styles, attrs: _attrs } = extractStyleAttrs(rest)
-
       const className = _css(css(styles)({ theme }))
+
+      const _componentName = `hola-${componentName}` || `hola-component-${id}`
 
       return () =>
         h(
           tag,
           {
-            class: cx(inheritedClass as string, className),
+            class: cx(inheritedClass as string, _componentName, className),
             ...props,
             ..._attrs,
           },
@@ -41,7 +47,7 @@ export const hola: IHolaFactory = (
 type IHolaFactory = {
   [key in DOMElements]: any
 } & {
-  (tag: DOMElements): any
+  (tag: DOMElements, componentName?: string): any
 }
 
 domElements.forEach((tag) => {

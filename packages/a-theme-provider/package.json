@@ -1,9 +1,5 @@
----
-to: packages/<%=h.changeCase.paramCase(name)%>/package.json
----
-
 {
-  "name": "<%= '@poke-ui/' + h.changeCase.paramCase(name)%>",
+  "name": "@poke-ui/a-theme-provider",
   "version": "1.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -12,7 +8,7 @@ to: packages/<%=h.changeCase.paramCase(name)%>/package.json
   "files": [
     "dist"
   ],
-  "description": "<%= 'Atomic UI Vue | ' + h.changeCase.pascalCase(name) + ' module'%>",
+  "description": "Atomic UI Vue | AThemeProvider module",
   "repository": "https://github.com/rhp-island/poke-ui.git",
   "author": "albert trantoan.fox.97@gmail.com",
   "license": "MIT",
