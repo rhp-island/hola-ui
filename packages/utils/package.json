@@ -1,5 +1,5 @@
 {
-  "name": "@lemon-ui/utils",
+  "name": "@hola-ui/utils",
   "version": "1.0.12-alpha.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -8,8 +8,8 @@
   "files": [
     "dist"
   ],
-  "description": "Lemon UI Vue | Utils module",
-  "repository": "https://github.com/rhp-island/lemon-ui.git",
+  "description": "Hola UI Vue | Utils module",
+  "repository": "https://github.com/rhp-island/hola-ui.git",
   "author": "albert trantoan.fox.97@gmail.com",
   "license": "MIT",
   "scripts": {
