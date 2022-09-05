@@ -15,10 +15,6 @@
   "dependencies": {
     "@hola-ui/utils": "1.1.0-alpha.0",
     "@types/tinycolor2": "^1.4.3",
-    "tinycolor2": "^1.4.2",
-    "watch": "concurrently yarn:watch:*",
-    "watch:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts -d dist/esm --source-maps --watch",
-    "watch:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts -d dist/cjs --source-maps --watch",
-    "watch:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types --watch"
+    "tinycolor2": "^1.4.2"
   }
 }
