@@ -7,10 +7,11 @@ import {
   inject,
   computed,
 } from '@vue/runtime-core'
+// @ts-ignore
 import { ThemeProviderProps } from '@hola-ui/vue'
 
 const AThemeProvider = defineComponent({
-  name: 'CAlert',
+  name: 'AThemeProvider',
   props: {
     value: {
       type: [Object] as PropType<ThemeProviderProps>,
