@@ -27,3 +27,4 @@ const HolaUIVuePlugin: Plugin = {
 export interface ThemeProviderProps extends ThemeOverride {}
 export default HolaUIVuePlugin
 export { extendTheme }
+export * from './theme.hooks'
