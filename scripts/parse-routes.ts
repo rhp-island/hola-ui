@@ -142,7 +142,7 @@ fs.writeFileSync(
   `/* Package components resolver only used in development mode */
     export default {\n${baseRoutes
       .map(
-        (pkg) => `  '@chakra-ui/${pkg}': '${packagesRoot}/${pkg}/src/index.ts'`
+        (pkg) => `  '@hola-ui/${pkg}': '${packagesRoot}/${pkg}/src/index.ts'`
       )
       .join(',\n')}\n}`,
   'utf8'

@@ -1,8 +1,8 @@
 import { UnionStringArray } from '@hola-ui/utils'
 
 /**
- * Carefully selected html elements for chakra components.
- * This is mostly for `chakra.[element]` syntax.
+ * Carefully selected html elements for hola components.
+ * This is mostly for `hola.[element]` syntax.
  *
  * Adapted from React package
  */
@@ -39,6 +39,7 @@ export const domElements = [
   'kbd',
   'label',
   'li',
+  'main',
   'mark',
   'nav',
   'ol',

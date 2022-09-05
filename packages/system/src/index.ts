@@ -18,7 +18,7 @@ export const hola: IHolaFactory = (
   componentName?: string
 ): any => {
   // Increment ids
-  id++
+  ++id
 
   return defineComponent({
     inheritAttrs: false,
@@ -28,7 +28,9 @@ export const hola: IHolaFactory = (
       const { styles, attrs: _attrs } = extractStyleAttrs(rest)
       const className = _css(css(styles)({ theme }))
 
-      const _componentName = `hola-${componentName}` || `hola-component-${id}`
+      const _componentName = componentName
+        ? `hola-${componentName}`
+        : `hola-component-${id}`
 
       return () =>
         h(
@@ -53,3 +55,5 @@ type IHolaFactory = {
 domElements.forEach((tag) => {
   hola[tag] = hola(tag)
 })
+
+export { domElements }
