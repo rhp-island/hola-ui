@@ -25,5 +25,6 @@
   "devDependencies": {
     "@types/lodash.camelcase": "^4.3.7",
     "@types/lodash.kebabcase": "^4.1.7"
-  }
+  },
+  "gitHead": "33dc4577b982b511eaf7124a716d45d04e2173a5"
 }

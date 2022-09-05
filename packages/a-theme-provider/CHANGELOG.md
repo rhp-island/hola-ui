@@ -8,4 +8,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **themeprovider:** change component name ([2f19c41](https://github.com/rhp-island/poke-ui/commit/2f19c414c671c1c22a7b06d35130cab15ed4c64c))
+* **themeprovider:** change component name ([2f19c41](https://github.com/rhp-island/hola-ui/commit/2f19c414c671c1c22a7b06d35130cab15ed4c64c))

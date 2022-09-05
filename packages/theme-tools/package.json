@@ -16,5 +16,6 @@
     "@hola-ui/utils": "1.1.0-alpha.1",
     "@types/tinycolor2": "^1.4.3",
     "tinycolor2": "^1.4.2"
-  }
+  },
+  "gitHead": "33dc4577b982b511eaf7124a716d45d04e2173a5"
 }

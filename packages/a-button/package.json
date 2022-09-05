@@ -15,5 +15,6 @@
     "watch:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts -d dist/esm --source-maps --watch",
     "watch:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts -d dist/cjs --source-maps --watch",
     "watch:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types --watch"
-  }
+  },
+  "gitHead": "33dc4577b982b511eaf7124a716d45d04e2173a5"
 }
