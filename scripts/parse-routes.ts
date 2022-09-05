@@ -35,7 +35,7 @@ const parseChildrenRoutes = (basePath: string, routes: string[]) =>
     path: createChildPath(basePath, route),
     component: path
       .relative(playgroundRoot, route)
-      .replace('../../packages/', '@lemon-ui/'),
+      .replace('../../packages/', '@hola-ui/'),
   }))
 
 export interface Route {

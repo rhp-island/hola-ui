@@ -6,7 +6,7 @@
 
 <script>
 import { defineComponent } from '@vue/runtime-core'
-import AButton from '@lemon-ui/a-button'
+import AButton from '@hola-ui/a-button'
 export default defineComponent({
   setup () {
     

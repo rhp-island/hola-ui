@@ -1,4 +1,4 @@
-import { getColor, mode } from '@lemon-ui/theme-tools'
+import { getColor, mode } from '@hola-ui/theme-tools'
 
 const parts = ['tablist', 'tab', 'tabpanel', 'indicator']
 

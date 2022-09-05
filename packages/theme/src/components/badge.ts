@@ -1,4 +1,4 @@
-import { getColor, mode, transparentize } from '@lemon-ui/theme-tools'
+import { getColor, mode, transparentize } from '@hola-ui/theme-tools'
 
 const baseStyle = {
   px: 1,

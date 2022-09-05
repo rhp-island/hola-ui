@@ -1,4 +1,4 @@
-// import { render } from '@lemon-ui/vue-test-utils'
+// import { render } from '@hola-ui/vue-test-utils'
 // import AButton from '../src'
 
 // it('should render properly', () => {

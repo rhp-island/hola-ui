@@ -1,4 +1,4 @@
-import { StringOrNumber, isString, isNumber } from '@lemon-ui/utils'
+import { StringOrNumber, isString, isNumber } from '@hola-ui/utils'
 import unit from 'css-get-unit'
 
 const startsWith = (string: string, target: string) =>

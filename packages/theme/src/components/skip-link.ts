@@ -1,4 +1,4 @@
-import { mode } from '@lemon-ui/theme-tools'
+import { mode } from '@hola-ui/theme-tools'
 
 const baseStyle = (props: Record<string, any>) => {
   return {

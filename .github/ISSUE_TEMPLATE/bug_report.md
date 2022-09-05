@@ -40,7 +40,7 @@ Official Atomic CodeSandbox templates:
 
 - OS: [e.g. macOS, Windows]
 - Browser (if applies): [e.g. Chrome, Safari]
-- Version of @lemon-ui/core: [e.g. 1.0.0-rc.3]
+- Version of @hola-ui/core: [e.g. 1.0.0-rc.3]
 - Version of Node.js: [e.g. 12.11.1]
 
 ## Additional context

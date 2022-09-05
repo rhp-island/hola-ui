@@ -1,4 +1,4 @@
-# `@lemon-ui/vue` for Vue 3 / Nuxt 3 (WIP)
+# `@hola-ui/vue` for Vue 3 / Nuxt 3 (WIP)
 
 The official working repository for V1 of Atomic UI Vue with Vue 3 / Nuxt 3 support.
 

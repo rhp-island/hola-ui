@@ -1,4 +1,4 @@
-import { mode } from '@lemon-ui/theme-tools'
+import { mode } from '@hola-ui/theme-tools'
 import Modal from './modal'
 
 const parts = Modal.parts

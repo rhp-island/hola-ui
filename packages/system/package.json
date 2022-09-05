@@ -1,9 +1,9 @@
 {
-  "name": "@lemon-ui/system",
+  "name": "@hola-ui/system",
   "version": "1.0.12-alpha.0",
   "main": "index.js",
-  "description": "Lemon UI Vue | System module",
-  "repository": "https://github.com/rhp-island/lemon-ui.git",
+  "description": "Hola UI Vue | System module",
+  "repository": "https://github.com/rhp-island/hola-ui.git",
   "author": "albert trantoan.fox.97@gmail.com",
   "license": "MIT",
   "scripts": {

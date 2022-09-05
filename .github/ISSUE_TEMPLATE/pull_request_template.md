@@ -1,4 +1,4 @@
-<!-- Please refer to our contributing documentation for any questions on submitting a pull request, or let us know here if you need any help: https://github.com/rhp-island/lemon-ui/blob/dev/CONTRIBUTING.md -->
+<!-- Please refer to our contributing documentation for any questions on submitting a pull request, or let us know here if you need any help: https://github.com/rhp-island/hola-ui/blob/dev/CONTRIBUTING.md -->
 
 ## Pull request checklist
 

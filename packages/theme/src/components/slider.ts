@@ -1,4 +1,4 @@
-import { mode, orient } from '@lemon-ui/theme-tools'
+import { mode, orient } from '@hola-ui/theme-tools'
 
 const parts = ['container', 'thumb', 'track', 'filledTrack']
 

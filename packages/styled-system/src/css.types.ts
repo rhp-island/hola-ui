@@ -1,4 +1,4 @@
-import { Dict, Omit } from '@lemon-ui/utils'
+import { Dict, Omit } from '@hola-ui/utils'
 import {
   PropertiesFallback,
   Property,

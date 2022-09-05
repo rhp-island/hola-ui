@@ -1,4 +1,4 @@
-import { mode, Styles } from '@lemon-ui/theme-tools'
+import { mode, Styles } from '@hola-ui/theme-tools'
 
 const styles: Styles = {
   global: (props: any) => ({

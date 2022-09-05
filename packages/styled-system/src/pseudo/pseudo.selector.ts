@@ -1,4 +1,4 @@
-import { AnyFunction, objectKeys } from '@lemon-ui/utils'
+import { AnyFunction, objectKeys } from '@hola-ui/utils'
 
 const group = {
   hover: (selector: string) => `${selector}:hover &, ${selector}[data-hover] &`,

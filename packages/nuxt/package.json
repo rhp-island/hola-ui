@@ -1,7 +1,7 @@
 {
-  "name": "@lemon-ui/nuxt",
+  "name": "@hola-ui/nuxt",
   "version": "1.0.12-alpha.0",
-  "description": "Nuxt 3 compatible version of Lemon UI Vue",
+  "description": "Nuxt 3 compatible version of Hola UI Vue",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -9,7 +9,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/rhp-island/lemon-ui.git",
+  "repository": "https://github.com/rhp-island/hola-ui.git",
   "author": "albert trantoan.fox.97@gmail.com",
   "license": "MIT",
   "scripts": {

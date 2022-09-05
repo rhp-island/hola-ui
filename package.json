@@ -1,9 +1,9 @@
 {
-  "name": "lemon-ui",
+  "name": "hola-ui",
   "version": "1.0.0",
-  "description": "Vue 3 compatible Lemon UI",
+  "description": "Vue 3 compatible Hola UI",
   "main": "index.js",
-  "repository": "https://github.com/rhp-island/lemon-ui.git",
+  "repository": "https://github.com/rhp-island/hola-ui.git",
   "author": "albert trantoan.fox.97@gmail.com",
   "workspaces": [
     "packages/*"

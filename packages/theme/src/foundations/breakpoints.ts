@@ -1,4 +1,4 @@
-import { createBreakpoints } from '@lemon-ui/theme-tools'
+import { createBreakpoints } from '@hola-ui/theme-tools'
 
 /**
  * Breakpoints for responsive design

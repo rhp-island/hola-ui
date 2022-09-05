@@ -1,4 +1,4 @@
-import { Dict, isObject, isFunction } from '@lemon-ui/utils'
+import { Dict, isObject, isFunction } from '@hola-ui/utils'
 import { pseudoSelectors } from './pseudo.selector'
 
 export function parsePseudo(props: Dict) {
