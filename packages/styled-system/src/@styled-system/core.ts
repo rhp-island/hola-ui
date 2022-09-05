@@ -1,8 +1,10 @@
 declare module '@styled-system/core' {
   import * as CSS from 'csstype'
 
+  // @ts-ignore
   export type ObjectOrArray<T> = T[] | { [K: string]: T | ObjectOrArray<T> }
 
+  // @ts-ignore
   export type Scale = ObjectOrArray<number | string>
 
   export interface ConfigStyle {
