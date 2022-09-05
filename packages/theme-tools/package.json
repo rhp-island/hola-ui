@@ -13,6 +13,7 @@
   "author": "albert trantoan.fox.97@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "@hola-ui/utils": "^1.0.14-alpha.0",
     "@types/tinycolor2": "^1.4.3",
     "tinycolor2": "^1.4.2"
   }

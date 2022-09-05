@@ -1,7 +1,10 @@
 import Color from 'tinycolor2'
-import { memoizedGet as get, Dict, isEmptyObject } from '@hola-ui/utils'
-
-import { fromEntries } from '@hola-ui/utils'
+import {
+  memoizedGet as get,
+  Dict,
+  isEmptyObject,
+  fromEntries,
+} from '@hola-ui/utils'
 
 // TODO: rEMove this
 export function orient(options: {
