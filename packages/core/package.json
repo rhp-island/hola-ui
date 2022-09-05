@@ -1,6 +1,6 @@
 {
   "name": "@hola-ui/vue",
-  "version": "1.0.12-alpha.0",
+  "version": "1.0.13-alpha.0",
   "description": "Vue 3 compatible version of Hola UI Vue",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
