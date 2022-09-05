@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0-alpha.2](https://github.com/rhp-island/hola-ui/compare/@hola-ui/utils@1.1.0-alpha.1...@hola-ui/utils@1.1.0-alpha.2) (2022-09-05)
+
+
+### Bug Fixes
+
+* **lerna:** fix scope not found ([2d62206](https://github.com/rhp-island/hola-ui/commit/2d62206c33fe391c34c32163b39da27f7049b325))
+
+
+
+
+
 # [1.1.0-alpha.1](https://github.com/rhp-island/hola-ui/compare/@hola-ui/utils@1.1.0-alpha.0...@hola-ui/utils@1.1.0-alpha.1) (2022-09-05)
 
 

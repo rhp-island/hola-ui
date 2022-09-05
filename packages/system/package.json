@@ -1,6 +1,6 @@
 {
   "name": "@hola-ui/system",
-  "version": "1.1.0-alpha.1",
+  "version": "1.1.0-alpha.2",
   "main": "index.js",
   "description": "Hola UI Vue | System module",
   "repository": "https://github.com/rhp-island/hola-ui.git",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@emotion/css": "^11.10.0",
-    "@hola-ui/styled-system": "1.1.0-alpha.0",
+    "@hola-ui/styled-system": "1.1.0-alpha.1",
     "lodash.camelcase": "^4.3.0",
     "lodash.kebabcase": "^4.1.1"
   },
