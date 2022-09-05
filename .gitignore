@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+dist
+playground/src/.generated/imports.js
+playground/src/.generated/routes.json
+playground/src/.generated/resolver.js
+playground/src/.generated/*
+.vercel
+lerna-debug.log

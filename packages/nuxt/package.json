@@ -1,0 +1,21 @@
+{
+  "name": "@lemon-ui/nuxt",
+  "version": "1.0.12-alpha.0",
+  "description": "Nuxt 3 compatible version of Lemon UI Vue",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/rhp-island/lemon-ui.git",
+  "author": "albert trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "concurrently yarn:build:*",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts -d dist/esm --source-maps",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts -d dist/cjs --source-maps",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types"
+  }
+}
