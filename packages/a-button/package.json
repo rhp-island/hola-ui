@@ -1,6 +1,6 @@
 {
   "name": "@hola-ui/a-button",
-  "version": "1.0.14-alpha.0",
+  "version": "1.1.0-alpha.0",
   "main": "index.js",
   "description": "Hola UI Vue | AButton component",
   "repository": "https://github.com/rhp-island/hola-ui.git",

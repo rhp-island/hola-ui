@@ -1,6 +1,6 @@
 {
   "name": "@hola-ui/theme-tools",
-  "version": "1.0.15-alpha.1",
+  "version": "1.1.0-alpha.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -13,7 +13,7 @@
   "author": "albert trantoan.fox.97@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "@hola-ui/utils": "1.1.0-alpha.0",
+    "@hola-ui/utils": "1.1.0-alpha.1",
     "@types/tinycolor2": "^1.4.3",
     "tinycolor2": "^1.4.2"
   }
