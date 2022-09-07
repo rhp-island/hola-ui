@@ -10,36 +10,36 @@
     </hola.main>
   </hola.section>
 </template>
-
 <script lang="ts">
-import { defineComponent, inject } from '@vue/runtime-core'
-import Sidebar from './components/Sidebar.vue'
-import routes from './router'
-export default defineComponent({
-  components: { Sidebar },
-  setup() {
-    const holaTheme = inject('$holaTheme')
-    return {
-      routes,
-      holaTheme
-    }
-  },
-})
-</script>
-
-<style>
-html, body {
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
-}
-html {
-  line-height: 1.5;
-  color: rgb(26, 32, 44);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-#app {
-  height: inherit;
-  width: inherit;
-}
-</style>
+  import { defineComponent } from 'vue'
+  import { useTheme } from '@hola-ui/a-theme-provider'
+  import Sidebar from './components/Sidebar.vue'
+  import routes from './router'
+  export default defineComponent({
+    components: { Sidebar },
+    setup() {
+      const theme = useTheme()
+      return {
+        routes,
+        theme
+      }
+    },
+  })
+  </script>
+  
+  <style>
+  html, body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  html {
+    line-height: 1.5;
+    color: rgb(26, 32, 44);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  #app {
+    height: inherit;
+    width: inherit;
+  }
+  </style>
