@@ -28,7 +28,7 @@
                   },
                   story.children
                     ? h(hola.h3, story.name)
-                    : [h(RouterLink, { to: story.path }, story.path === '/' ? () => [h(hola.img, { w: '120px', src: 'https://res.cloudinary.com/xtellar/image/upload/v1584242872/chakra-ui/chakra-ui-vue.png' })] : () => story.name)],
+                    : [h(RouterLink, { to: story.path }, story.path === '/' ? () => [h(hola.img, { w: '120px', src: 'https://res.cloudinary.com/xtellar/image/upload/v1584242872/hola-ui/hola-ui-vue.png' })] : () => story.name)],
                   story.children && h(Stories, { stories: story.children })
                 )
               ),   

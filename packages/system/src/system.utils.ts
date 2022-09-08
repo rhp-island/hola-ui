@@ -1,4 +1,7 @@
-import { UnionStringArray } from '@hola-ui/utils'
+import { UnionStringArray, omit } from '@hola-ui/utils'
+import { keyframes, injectGlobal } from '@emotion/css'
+import { PropType } from '@vue/runtime-core'
+import { ThemingProps } from './system.types'
 
 /**
  * Carefully selected html elements for hola components.
@@ -34,13 +37,14 @@ export const domElements = [
   'h6',
   'header',
   'hr',
+  'iframe',
   'img',
   'input',
   'kbd',
   'label',
   'li',
-  'main',
   'mark',
+  'main',
   'nav',
   'ol',
   'p',
@@ -69,3 +73,17 @@ export const domElements = [
 ] as const
 
 export type DOMElements = UnionStringArray<typeof domElements>
+
+export type DeepPartial<T> = {
+  [P in keyof T]?: DeepPartial<T[P]>
+}
+
+export type ToPropType<T> = {
+  [P in keyof T]?: PropType<T[P]>
+}
+
+export function omitThemingProps<T extends ThemingProps>(props: T) {
+  return omit(props, ['styleConfig', 'size', 'variant', 'colorScheme'])
+}
+
+export { keyframes, injectGlobal }

@@ -1,43 +1,26 @@
-export type Merge<T, P> = P & Omit<T, keyof P>
+import { ComputedRef, Ref, VNodeProps } from '@vue/runtime-core'
+import { TemplateRef } from './dom'
 
-export type UnionStringArray<T extends Readonly<string[]>> = T[number]
+/**
+ * Value may or may not be a `ref`.
+ *
+ * ```ts
+ * type MaybeRef<T> = T | Ref<T>
+ * ```
+ */
+export type MaybeRef<T> = T | Ref<T> | ComputedRef<T>
 
-export type Omit<T, K> = Pick<T, Exclude<keyof T, K>>
+/**
+ * May be a simple ref (nor computed ref)
+ */
+export type MaybeBaseRef<T> = T | Ref<T>
 
-export type LiteralUnion<T extends U, U extends any = string> =
-  | T
-  | (U & { _?: never })
+/** VNodeProps Object */
+export interface MergedVNodeProps extends VNodeProps {
+  ref: TemplateRef | ((el: TemplateRef | null) => void)
+}
 
-export type AnyFunction<T = any> = (...args: T[]) => any
-
-export type FunctionArguments<T extends Function> = T extends (
-  ...args: infer R
-) => any
-  ? R
-  : never
-
-export type Dict<T = any> = Record<string, T>
-
-export type Booleanish = boolean | 'true' | 'false'
-
-export type StringOrNumber = string | number
-
-export type EventKeys =
-  | 'ArrowDown'
-  | 'ArrowUp'
-  | 'ArrowLeft'
-  | 'ArrowRight'
-  | 'Enter'
-  | 'Space'
-  | 'Tab'
-  | 'Backspace'
-  | 'Control'
-  | 'Meta'
-  | 'Home'
-  | 'End'
-  | 'PageDown'
-  | 'PageUp'
-  | 'Delete'
-  | 'Escape'
-  | ' '
-  | 'Shift'
+/**
+ * Any function
+ */
+export type Fn = () => void

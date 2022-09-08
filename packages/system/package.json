@@ -1,30 +1,42 @@
 {
   "name": "@hola-ui/system",
-  "version": "1.1.0-alpha.2",
-  "main": "index.js",
-  "description": "Hola UI Vue | System module",
-  "repository": "https://github.com/rhp-island/hola-ui.git",
-  "author": "albert trantoan.fox.97@gmail.com",
+  "description": "Hola UI Vue | System component",
+  "version": "0.0.0-alpha.0",
+  "main": "dist/hola-ui-system.cjs.js",
+  "module": "dist/hola-ui-system.esm.js",
+  "author": "Albert Tran <trantoan.fox.97@gmail.com>",
+  "homepage": "https://github.com/rhp-island/hola-ui#readme",
   "license": "MIT",
-  "scripts": {
-    "build": "concurrently yarn:build:*",
-    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts -d dist/esm --source-maps",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts -d dist/cjs --source-maps",
-    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
-    "watch": "concurrently yarn:watch:*",
-    "watch:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts -d dist/esm --source-maps --watch",
-    "watch:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts -d dist/cjs --source-maps --watch",
-    "watch:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types --watch"
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/hola-ui-system.cjs.js",
+      "default": "./dist/hola-ui-system.esm.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhp-island/hola-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rhp-island/hola-ui/issues"
+  },
+  "sideEffects": false,
+    "scripts": {
+    "clean": "rimraf dist"
   },
   "dependencies": {
-    "@emotion/css": "^11.10.0",
-    "@hola-ui/styled-system": "1.1.0-alpha.1",
-    "lodash.camelcase": "^4.3.0",
-    "lodash.kebabcase": "^4.1.1"
+    "@hola-ui/system": "latest"
   },
   "devDependencies": {
-    "@types/lodash.camelcase": "^4.3.7",
-    "@types/lodash.kebabcase": "^4.1.7"
+    "vue": "latest"
   },
-  "gitHead": "33dc4577b982b511eaf7124a716d45d04e2173a5"
+  "peerDependencies": {
+    "vue": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

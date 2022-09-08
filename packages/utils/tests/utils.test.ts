@@ -1,3 +1,7 @@
-it('should be truthy', () => {
-  expect(1).toBe(1)
+import { render } from '../../test-utils/src'
+import { Utils } from '../src'
+
+it('should render properly', () => {
+  const { asFragment } = render(Utils)
+  expect(asFragment()).toMatchSnapshot()
 })

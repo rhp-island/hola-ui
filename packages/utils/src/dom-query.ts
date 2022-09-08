@@ -1,134 +1,68 @@
-import { isFocusable, isTabbable, isHTMLElement } from './tabbable'
-
-const focusableElList = [
-  'input:not([disabled])',
-  'select:not([disabled])',
-  'textarea:not([disabled])',
-  'embed',
-  'iframe',
-  'object',
-  'a[href]',
-  'area[href]',
-  'button:not([disabled])',
-  '[tabindex]',
-  'audio[controls]',
-  'video[controls]',
-  '*[tabindex]:not([aria-disabled])',
-  '*[contenteditable]',
-]
-
-const focusableElSelector = focusableElList.join()
-
-export function getAllFocusable<T extends HTMLElement>(container: T) {
-  const focusableEls = Array.from(
-    container.querySelectorAll<T>(focusableElSelector)
-  )
-  focusableEls.unshift(container)
-  return focusableEls
-    .filter(isFocusable)
-    .filter((el) => window.getComputedStyle(el).display !== 'none')
+interface IChildNode extends ChildNode {
+  item?: any
+  localName?: string
 }
 
-export function getFirstFocusable<T extends HTMLElement>(container: T) {
-  const allFocusable = getAllFocusable(container)
-  return allFocusable.length ? allFocusable[0] : null
-}
+/**
+ * Computes the selector of an element from the DOM
+ *
+ * The motivation for this method is to use it in the
+ * resolve the issue where DOM nodes seem to be
+ * removed from the DOM during patching for reactivity.
+ *
+ * This was breaking the behaviour of the `useFocusLock`
+ * hook.
+ *
+ * Adopted from stack overflow:
+ * https://stackoverflow.com/questions/22515835/javascript-find-selector-of-an-element
+ */
+export function getSelector(node: HTMLElement) {
+  const id = node.getAttribute("id")
 
-export function getAllTabbable<T extends HTMLElement>(
-  container: T,
-  fallbackToFocusable?: boolean
-) {
-  const allFocusable = Array.from(
-    container.querySelectorAll<T>(focusableElSelector)
-  )
-  const allTabbable = allFocusable.filter(isTabbable)
+  if (id) return "#" + id
 
-  if (isTabbable(container)) {
-    allTabbable.unshift(container)
+  let path = ""
+
+  while (node) {
+    let name = node.localName
+    const parent = node.parentNode
+
+    if (!parent) {
+      path = name + " > " + path
+      continue
+    }
+
+    if (node.getAttribute("id")) {
+      path = "#" + node.getAttribute("id") + " > " + path
+      break
+    }
+
+    const sameTagSiblings: any = []
+    let children = parent.childNodes
+    children = Array.prototype.slice.call(children) as any
+
+    children.forEach((child) => {
+      // @ts-ignore
+      if (child.localName == name) {
+        sameTagSiblings.push(child)
+      }
+    })
+
+    // if there are more than one
+    // children of that type use nth-of-type
+    if (sameTagSiblings.length > 1) {
+      const index = sameTagSiblings.indexOf(node)
+      name += ":nth-of-type(" + (index + 1) + ")"
+    }
+
+    if (path) {
+      path = name + " > " + path
+    } else {
+      path = name
+    }
+
+    node = parent as HTMLElement
   }
 
-  if (!allTabbable.length && fallbackToFocusable) {
-    return allFocusable
-  }
-  return allTabbable
-}
-
-export function getFirstTabbableIn<T extends HTMLElement>(
-  container: T,
-  fallbackToFocusable?: boolean
-): T | null {
-  const [first] = getAllTabbable(container, fallbackToFocusable)
-  return first || null
-}
-
-export function getLastTabbableIn<T extends HTMLElement>(
-  container: T,
-  fallbackToFocusable?: boolean
-): T | null {
-  const allTabbable = getAllTabbable(container, fallbackToFocusable)
-  return allTabbable[allTabbable.length - 1] || null
-}
-
-export function getNextTabbable<T extends HTMLElement>(
-  container: T,
-  fallbackToFocusable?: boolean
-): T | null {
-  const allFocusable = getAllFocusable(container)
-  const index = allFocusable.indexOf(document.activeElement as T)
-  const slice = allFocusable.slice(index + 1)
-  return (
-    slice.find(isTabbable) ||
-    allFocusable.find(isTabbable) ||
-    (fallbackToFocusable ? slice[0] : null)
-  )
-}
-
-export function getPreviousTabbable<T extends HTMLElement>(
-  container: T,
-  fallbackToFocusable?: boolean
-): T | null {
-  const allFocusable = getAllFocusable(container).reverse()
-  const index = allFocusable.indexOf(document.activeElement as T)
-  const slice = allFocusable.slice(index + 1)
-  return (
-    slice.find(isTabbable) ||
-    allFocusable.find(isTabbable) ||
-    (fallbackToFocusable ? slice[0] : null)
-  )
-}
-
-export function focusNextTabbable<T extends HTMLElement>(
-  container: T,
-  fallbackToFocusable?: boolean
-) {
-  const nextTabbable = getNextTabbable(container, fallbackToFocusable)
-  if (nextTabbable && isHTMLElement(nextTabbable)) {
-    nextTabbable.focus()
-  }
-}
-
-export function focusPreviousTabbable<T extends HTMLElement>(
-  container: T,
-  fallbackToFocusable?: boolean
-) {
-  const previousTabbable = getPreviousTabbable(container, fallbackToFocusable)
-  if (previousTabbable && isHTMLElement(previousTabbable)) {
-    previousTabbable.focus()
-  }
-}
-
-function matches(element: Element, selectors: string): boolean {
-  if ('matches' in element) return element.matches(selectors)
-  if ('msMatchesSelector' in element)
-    return (element as any).msMatchesSelector(selectors)
-  return (element as any).webkitMatchesSelector(selectors)
-}
-
-export function closest<T extends HTMLElement>(element: T, selectors: string) {
-  if ('closest' in element) return element.closest(selectors)
-  do {
-    if (matches(element, selectors)) return element
-    element = (element.parentElement || element.parentNode) as any
-  } while (element !== null && element.nodeType === 1)
-  return null
+  return path
 }

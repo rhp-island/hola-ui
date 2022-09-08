@@ -1,9 +1,13 @@
+---
+to: packages/<%=h.changeCase.paramCase(name)%>/package.json
+---
+
 {
-  "name": "@hola-ui/utils",
-  "description": "Hola UI Vue | Utils component",
+  "name": "<%= '@hola-ui/' + h.changeCase.paramCase(name)%>",
+  "description": "<%= 'Hola UI Vue | ' + h.changeCase.sentence(name) + ' component'%>",
   "version": "0.0.0-alpha.0",
-  "main": "dist/hola-ui-utils.cjs.js",
-  "module": "dist/hola-ui-utils.esm.js",
+  "main": "<%= 'dist/hola-ui-' + h.changeCase.paramCase(name) + '.cjs.js' %>",
+  "module": "<%= 'dist/hola-ui-' + h.changeCase.paramCase(name) + '.esm.js' %>",
   "author": "Albert Tran <trantoan.fox.97@gmail.com>",
   "homepage": "https://github.com/rhp-island/hola-ui#readme",
   "license": "MIT",
@@ -12,8 +16,8 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/hola-ui-utils.cjs.js",
-      "default": "./dist/hola-ui-utils.esm.js"
+      "require": "<%= './dist/hola-ui-' + h.changeCase.paramCase(name) + '.cjs.js' %>",
+      "default": "<%= './dist/hola-ui-' + h.changeCase.paramCase(name) + '.esm.js' %>"
     }
   },
   "repository": {
