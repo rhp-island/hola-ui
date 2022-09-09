@@ -1,4 +1,4 @@
-import { computed, ComputedRef, Ref } from '@vue/runtime-core'
+import { computed, ComputedRef, Ref } from 'vue'
 import { SystemStyleObject } from '@hola-ui/styled-system'
 import { ThemingProps } from '../system.types'
 import { filterUndefined, get, mergeWith, runIfFn } from '@hola-ui/utils'

@@ -4,7 +4,7 @@ import {
   computed,
   getCurrentInstance,
   ComponentInternalInstance,
-} from '@vue/runtime-core'
+} from 'vue'
 import { UnionStringArray } from '@hola-ui/utils'
 
 const inputTypes = [

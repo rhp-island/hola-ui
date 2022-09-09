@@ -1,13 +1,5 @@
-import { isFunction, isObject, Dict } from '@hola-ui/utils'
-import { SystemStyleObject } from '@hola-ui/styled-system'
-import {
-  inject,
-  InjectionKey,
-  provide,
-  isVNode,
-  Slots,
-  VNode,
-} from '@vue/runtime-core'
+import { isObject } from '@hola-ui/utils'
+import { inject, InjectionKey, provide, isVNode, Slots, VNode } from 'vue'
 
 export interface CreateContextOptions {
   /**

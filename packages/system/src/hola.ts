@@ -5,11 +5,11 @@ import {
   DefineComponent,
   defineComponent,
   h,
-  HTMLAttributes,
   ComponentCustomProps,
   PropType,
   resolveComponent,
-} from '@vue/runtime-core'
+} from 'vue'
+import { HTMLAttributes } from '@vue/runtime-dom'
 import {
   css,
   isStyleProp,
@@ -17,7 +17,7 @@ import {
   SystemProps,
   SystemStyleObject,
 } from '@hola-ui/styled-system'
-import _styled, { useEmotionTheme } from '@hola-ui/styled'
+// import _styled, { useEmotionTheme } from '@hola-ui/styled'
 
 import {
   isFunction,
@@ -294,15 +294,15 @@ interface StyledOptions extends StyleResolverOptions {
     | ((props: StyleResolverProps) => SystemStyleObject)
 }
 
-export function styled<T extends As, P = {}>(
-  component: T,
-  options: StyledOptions
-) {
-  const { baseStyle, ...styledOptions } = options ?? {}
+// export function styled<T extends As, P = {}>(
+//   component: T,
+//   options: StyledOptions
+// ) {
+//   const { baseStyle, ...styledOptions } = options ?? {}
 
-  const styleObject = toCSSObject(options)
-  return _styled(component as HolaTagOrComponent, styledOptions)(styleObject)
-}
+//   const styleObject = toCSSObject(options)
+//   return _styled(component as HolaTagOrComponent, styledOptions)(styleObject)
+// }
 
 export type HolaComponent<P = HolaProps> = ComponentWithProps<As & P>
 

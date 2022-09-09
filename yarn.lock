@@ -1722,7 +1722,7 @@
     "@emotion/memoize" "^0.8.0"
     stylis "4.0.13"
 
-"@emotion/css@^11.7.1":
+"@emotion/css@^11.10.0", "@emotion/css@^11.7.1":
   version "11.10.0"
   resolved "https://registry.yarnpkg.com/@emotion/css/-/css-11.10.0.tgz#270b4fdf2419e59cb07081d0e9f7940d88b8b443"
   integrity sha512-dH9f+kSCucc8ilMg0MUA1AemabcyzYpe5EKX24F528PJjD7HyIY/VBNJHxfUdc8l400h2ncAjR6yEDu+DBj2cg==
@@ -1909,12 +1909,22 @@
   resolved "https://registry.yarnpkg.com/@fal-works/esbuild-plugin-global-externals/-/esbuild-plugin-global-externals-2.1.2.tgz#c05ed35ad82df8e6ac616c68b92c2282bd083ba4"
   integrity sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==
 
-"@hola-ui/styled-system@latest":
+"@hola-ui/styled-system@1.1.0-alpha.1", "@hola-ui/styled-system@^2.2.2":
   version "1.1.0-alpha.1"
   resolved "https://registry.yarnpkg.com/@hola-ui/styled-system/-/styled-system-1.1.0-alpha.1.tgz#4ca1dc431c8bb485612f3c38a49d2afdc7cf9ebc"
   integrity sha512-S9Sq2TwspBQz0RIPYzDREQyjOF2FpK3HopgNM54jCh+U5efT/UoPhbTzbogHR8TsHSeSBk4rfPLLf1D4sgJ7aA==
 
-"@hola-ui/utils@latest":
+"@hola-ui/system@latest":
+  version "1.1.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@hola-ui/system/-/system-1.1.0-alpha.2.tgz#80a614670ff4dcbec74f20028296e1af079029b4"
+  integrity sha512-jNmBPBVt5gCzgYyBTAr/syv2yCT34x+nAVvkNjQik/s+4ou9vqXYIVJ3rYU+MElaJvOekC/eJO8mc7pS4JQymg==
+  dependencies:
+    "@emotion/css" "^11.10.0"
+    "@hola-ui/styled-system" "1.1.0-alpha.1"
+    lodash.camelcase "^4.3.0"
+    lodash.kebabcase "^4.1.1"
+
+"@hola-ui/utils@^1.1.0-alpha.2", "@hola-ui/utils@^2.0.3", "@hola-ui/utils@latest":
   version "1.1.0-alpha.2"
   resolved "https://registry.yarnpkg.com/@hola-ui/utils/-/utils-1.1.0-alpha.2.tgz#d8cfc481a7d43300ad56eb0b592985c05eeb9915"
   integrity sha512-/08uVmjKryfl1slUED7mYNoyn4v4GAbohrh1LwShM9Zjfc5oz8yCrUo7qvAsv6mIjJbM4mZQrm1bn0KwK83I9w==
@@ -3850,7 +3860,14 @@
   dependencies:
     "@types/lodash" "*"
 
-"@types/lodash.mergewith@^4.6.6":
+"@types/lodash.memoize@^4.1.6":
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.memoize/-/lodash.memoize-4.1.7.tgz#aff94ab32813c557cbc1104e127030e3d60a3b27"
+  integrity sha512-lGN7WeO4vO6sICVpf041Q7BX/9k1Y24Zo3FY0aUezr1QlKznpjzsDk3T3wvH8ofYzoK0QupN9TWcFAFZlyPwQQ==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash.mergewith@^4.6.6", "@types/lodash.mergewith@^4.6.7":
   version "4.6.7"
   resolved "https://registry.yarnpkg.com/@types/lodash.mergewith/-/lodash.mergewith-4.6.7.tgz#eaa65aa5872abdd282f271eae447b115b2757212"
   integrity sha512-3m+lkO5CLRRYU0fhGRp7zbsGi6+BZj0uTVSwvcKU+nSlhjA9/QRNfuSGnD2mX6hQA7ZbmcCkzk5h4ZYGOtk14A==
@@ -3935,6 +3952,11 @@
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
+
+"@types/object-assign@4.0.30":
+  version "4.0.30"
+  resolved "https://registry.yarnpkg.com/@types/object-assign/-/object-assign-4.0.30.tgz#8949371d5a99f4381ee0f1df0a9b7a187e07e652"
+  integrity sha512-HhE8gFfLj321pa6OE59QmOdL5NgIOhkdYn7MWnZTOcHOms8XFzNgr9+A0/GbN0XEX9wTM58yg4YXKhGr69QIUw==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -6794,6 +6816,13 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
+css-box-model@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/css-box-model/-/css-box-model-1.2.1.tgz#59951d3b81fd6b2074a62d49444415b0d2b4d7c1"
+  integrity sha512-a7Vr4Q/kd/aw96bnJG332W9V9LkJO69JRcaCYDUqjp6/z0w6VcZjgAcTbgFxEPfBgdnAwlh3iwu+hLopa+flJw==
+  dependencies:
+    tiny-invariant "^1.0.6"
+
 css-color-names@0.0.4, css-color-names@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
@@ -7051,7 +7080,7 @@ cssstyle@^2.3.0:
   dependencies:
     cssom "~0.3.6"
 
-csstype@3.1.0, csstype@^3.0.2, csstype@^3.0.5:
+csstype@3.1.0, csstype@^3.0.2, csstype@^3.0.5, csstype@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.0.tgz#4ddcac3718d787cf9df0d1b7d15033925c8f29f2"
   integrity sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==
@@ -17093,6 +17122,11 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha512-qsdtZH+vMoCARQtyod4imc2nIJwg9Cc7lPRrw9CzF8ZKR0khdr8+2nX80PBhET3tcyTtJDxAffGh2rXH4tyU8A==
 
+tiny-invariant@^1.0.6:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.2.0.tgz#a1141f86b672a9148c72e978a19a73b9b94a15a9"
+  integrity sha512-1Uhn/aqw5C6RI4KejVeTg6mIS7IqxnLJ8Mv2tV5rTc0qWobay7pDUz6Wi392Cnc8ak1H0F2cjoRzb2/AW4+Fvg==
+
 tinycolor2@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
@@ -18182,7 +18216,7 @@ vue3-perfect-scrollbar@^1.5.5:
     perfect-scrollbar "^1.5.5"
     postcss-import "^12.0.0"
 
-vue@^3.2.26, vue@^3.2.29:
+vue@^3.2.26, vue@^3.2.29, vue@latest:
   version "3.2.39"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.39.tgz#de071c56c4c32c41cbd54e55f11404295c0dd62d"
   integrity sha512-tRkguhRTw9NmIPXhzk21YFBqXHT2t+6C6wPOgQ50fcFVWnPdetmRqbmySRHznrYjX2E47u0cGlKGcxKZJ38R/g==

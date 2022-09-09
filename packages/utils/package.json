@@ -24,17 +24,27 @@
     "url": "https://github.com/rhp-island/hola-ui/issues"
   },
   "sideEffects": false,
-    "scripts": {
+  "scripts": {
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@hola-ui/system": "latest"
+    "@hola-ui/styled-system": "^2.2.2",
+    "@hola-ui/utils": "^2.0.3",
+    "css-box-model": "1.2.1",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.memoize": "^4.1.2",
+    "lodash.mergewith": "^4.6.2",
+    "object-assign": "^4.1.1"
   },
   "devDependencies": {
-    "vue": "latest"
+    "@types/lodash.mergewith": "^4.6.6",
+    "@types/object-assign": "4.0.30",
+    "@types/lodash.camelcase": "^4.3.6",
+    "@types/lodash.memoize": "^4.1.6",
+    "vue": "^3.2.29"
   },
   "peerDependencies": {
-    "vue": "latest"
+    "vue": "^3.2.29"
   },
   "publishConfig": {
     "access": "public"

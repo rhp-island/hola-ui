@@ -30,7 +30,14 @@
     "test:component": "yarn cy:run",
     "test": "jest",
     "test:unit": "cross-env NODE_ENV=test jest --config jest.config.js",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "pkg": "manypkg run",
+    "pkgs:check": "manypkg check",
+    "pkgs:fix": "manypkg fix",
+    "size": "echo `TODO: Analyze build sizes`",
+    "analyze": "size-limit --why",
+    "vitest": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "license": "MIT",
   "private": true,
