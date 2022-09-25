@@ -1,19 +1,22 @@
-import { Component, Fragment, Suspense, Teleport } from 'vue'
 import {
-  SystemProps,
-  ResponsiveValue,
-  StyleProps,
-  ThemeTypings,
-} from '@hola-ui/styled-system'
-import { IntrinsicElementAttributes } from './dom.types'
-import { Dict } from '@hola-ui/utils'
-import {
+  Component,
+  Fragment,
+  Suspense,
+  Teleport,
   AllowedComponentProps,
   ComponentCustomProps,
   VNodeProps,
   HTMLAttributes,
   VNode,
 } from 'vue'
+import {
+  SystemProps,
+  ResponsiveValue,
+  StyleProps,
+  ThemeTypings,
+} from '@hola-ui/styled-system'
+import { Dict } from '@hola-ui/utils'
+import { IntrinsicElementAttributes } from './dom.types'
 import { DOMElements } from './system.utils'
 import { StyleResolverProps } from './hola'
 
@@ -119,4 +122,16 @@ declare global {
       extends Omit<HTMLAttributes, 'color'>,
         HolaProps {}
   }
+}
+
+export interface ThemingProps<ThemeComponent extends string = any> {
+  variant?: ThemeComponent extends keyof ThemeTypings['components']
+    ? ThemeTypings['components'][ThemeComponent]['variants']
+    : string
+  size?: ThemeComponent extends keyof ThemeTypings['components']
+    ? ThemeTypings['components'][ThemeComponent]['sizes']
+    : string
+  colorScheme?: ThemeTypings['colorSchemes']
+  orientation?: 'vertical' | 'horizontal'
+  styleConfig?: Dict
 }

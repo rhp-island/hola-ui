@@ -1,0 +1,40 @@
+{
+  "name": "@hola-ui/anatomy",
+  "description": "Hola UI Vue | The anatomy of all hola components component",
+  "version": "0.0.0-alpha.0",
+  "main": "dist/hola-ui-anatomy.cjs.js",
+  "module": "dist/hola-ui-anatomy.esm.js",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "homepage": "https://github.com/rhp-island/hola-ui#readme",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/hola-ui-anatomy.cjs.js",
+      "default": "./dist/hola-ui-anatomy.esm.js"
+    }
+  },
+  "repository": "https://github.com/rhp-island/hola-ui/tree/master/packages/anatomy",
+  "bugs": {
+    "url": "https://github.com/rhp-island/hola-ui/issues"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@hola-ui/system": "latest",
+    "@hola-ui/theme-tools": "latest"
+  },
+  "devDependencies": {
+    "vue": "^3.2.37"
+  },
+  "peerDependencies": {
+    "vue": "^3.1.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

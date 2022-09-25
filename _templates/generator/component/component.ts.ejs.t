@@ -12,7 +12,7 @@ to: packages/<%=h.changeCase.paramCase(name)%>/src/<%=h.changeCase.paramCase(nam
  */
 
 import { h, defineComponent, PropType } from 'vue'
-import { hola, DOMElements } from '@hola-ui/vue-system'
+import { hola, DOMElements } from '@hola-ui/system'
 
 export const <%= h.changeCase.pascalCase(name) %> = defineComponent({
   props: {

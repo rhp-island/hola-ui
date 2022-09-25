@@ -9,6 +9,7 @@ import {
 } from 'vue'
 import { debounce } from './timers'
 import { MaybeRef } from './types'
+import { canUseDOM } from './configurable'
 
 /**
  * Interface for node provided by template ref
@@ -150,3 +151,5 @@ export function isHTMLElement(el: any): el is HTMLElement {
 export function getOwnerDocument(node?: Element | null): Document {
   return isElement(node) ? node.ownerDocument ?? document : document
 }
+
+export const isBrowser = canUseDOM()

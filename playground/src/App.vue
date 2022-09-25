@@ -22,7 +22,7 @@
 <script lang="ts">
 import { computed, defineComponent, watchEffect } from 'vue'
 import { HReset, HIconButton, useColorMode } from '@hola-ui/vue-next'
-import { useTheme } from "@hola-ui/vue-system"
+import { useTheme } from "@hola-ui/system"
 import Sidebar from './components/Sidebar.vue'
 import { routes } from './router'
 

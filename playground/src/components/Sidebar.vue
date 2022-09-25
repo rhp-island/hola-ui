@@ -1,5 +1,5 @@
 <script>
-import { hola } from '@hola-ui/vue-system'
+import { hola } from '@hola-ui/system'
 import { defineComponent, h } from 'vue'
 import { RouterLink } from 'vue-router'
 

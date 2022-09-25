@@ -6,7 +6,7 @@ const {
 } = require('../packages/core/package.json')
 
 const { ESLint } = require('eslint')
-// const { domElements } = require('@hola-ui/vue-system')
+// const { domElements } = require('@hola-ui/system')
 const domElements = []
 const HolaComponents = require('@hola-ui/vue-next')
 
@@ -46,7 +46,7 @@ async function generateComponents() {
    * This file was generated on ${new Date().toISOString()}
    */
 
-   import { HolaProps, hola } from '@hola-ui/vue-system'
+   import { HolaProps, hola } from '@hola-ui/system'
    import { VNodeChild, VNode, HTMLAttributes } from 'vue'
    
    export type JsxNode = VNodeChild | JSX.Element

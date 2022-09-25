@@ -6,6 +6,7 @@ export type SemanticValue<
   Token extends string = string
 > = Union<Token> | Partial<Record<'default' | Conditions, Union<Token>>>
 
+// eslint-disable-next-line @typescript-eslint/member-delimiter-style
 export type PlainToken = { isSemantic: false; value: string | number }
 export type SemanticToken = {
   isSemantic: true

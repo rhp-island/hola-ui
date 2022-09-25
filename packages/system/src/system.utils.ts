@@ -1,7 +1,6 @@
-import { UnionStringArray, omit } from '@hola-ui/utils'
-import { keyframes, injectGlobal } from '@emotion/css'
 import { PropType } from 'vue'
-import { ThemingProps } from './system.types'
+import { UnionStringArray } from '@hola-ui/utils'
+import { keyframes, injectGlobal } from '@emotion/css'
 
 /**
  * Carefully selected html elements for hola components.

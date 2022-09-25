@@ -1,6 +1,6 @@
 {
   "name": "@hola-ui/utils",
-  "version": "0.1.1-alpha.0",
+  "version": "1.2.2-alpha.0",
   "main": "dist/hola-ui-utils.cjs.js",
   "module": "dist/hola-ui-utils.esm.js",
   "description": "Hola UI Vue | Utils module",

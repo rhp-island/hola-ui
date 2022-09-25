@@ -6,10 +6,10 @@
  *
  * This is a generated file. Do not edit it's contents.
  *
- * This file was generated on 2022-09-25T10:24:47.299Z
+ * This file was generated on 2022-09-25T15:20:16.054Z
  */
 
-import { HolaProps, hola } from '@hola-ui/vue-system'
+import { HolaProps, hola } from '@hola-ui/system'
 import { VNodeChild, VNode, HTMLAttributes } from 'vue'
 
 export type JsxNode = VNodeChild | JSX.Element

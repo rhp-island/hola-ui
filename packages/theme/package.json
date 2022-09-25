@@ -1,0 +1,39 @@
+{
+  "name": "@hola-ui/theme",
+  "version": "1.0.0-alpha.10",
+  "main": "dist/hola-ui-theme.cjs.js",
+  "module": "dist/hola-ui-theme.esm.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/hola-ui-theme.cjs.js",
+      "default": "./dist/hola-ui-theme.esm.js"
+    }
+  },
+  "description": "Hola UI Vue | Theme module",
+  "repository": "https://github.com/rhp-island/hola-ui/tree/master/packages/theme",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@hola-ui/anatomy": "latest",
+    "@hola-ui/theme-tools": "latest"
+  },
+  "peerDependencies": {
+    "@hola-ui/utils": "latest",
+    "@hola-ui/system": "latest",
+    "vue": "^3.2.29"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@hola-ui/utils": "latest",
+    "@hola-ui/system": "latest",
+    "vue": "^3.2.37"
+  }
+}

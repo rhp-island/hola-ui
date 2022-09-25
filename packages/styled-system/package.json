@@ -17,7 +17,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@hola-ui/utils": "^0.1.0-alpha.13",
+    "@hola-ui/utils": "latest",
     "csstype": "3.0.9"
   },
   "devDependencies": {

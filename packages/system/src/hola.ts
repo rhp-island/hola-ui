@@ -16,7 +16,7 @@ import {
   ResponsiveValue,
   SystemProps,
   SystemStyleObject,
-} from '@hola-ui/styled'
+} from '@hola-ui/styled-system'
 import _styled from '@hola-ui/styled'
 import {
   isFunction,

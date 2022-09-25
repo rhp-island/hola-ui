@@ -1,7 +1,7 @@
-import type { HTMLAttributes, VNode } from "vue"
-import type { HolaProps } from "@hola-ui/vue-system"
-import { DefineComponent } from "vue"
-import { HolaFactoryProps, ComponentWithProps } from "@hola-ui/vue-system"
+import type { HTMLAttributes, VNode } from 'vue'
+import type { HolaProps } from '@hola-ui/system'
+import { DefineComponent } from 'vue'
+import { HolaFactoryProps, ComponentWithProps } from '@hola-ui/system'
 
 declare global {
   namespace JSX {
@@ -16,12 +16,12 @@ declare global {
     }
 
     interface IntrinsicAttributes
-      extends Omit<HTMLAttributes, "color">,
+      extends Omit<HTMLAttributes, 'color'>,
         HolaProps {}
   }
 }
 
-declare module "vue" {
+declare module 'vue' {
   export type JSXComponent<Props = any> =
     | { new (): ComponentPublicInstance<Props> }
     | FunctionalComponent<Props>

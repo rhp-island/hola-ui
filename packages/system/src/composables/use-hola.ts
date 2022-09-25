@@ -1,5 +1,5 @@
 import { inject } from 'vue'
-import { useColorMode } from '@hola-ui/c-color-mode'
+import { useColorMode } from '@hola-ui/h-color-mode'
 import { Dict } from '@hola-ui/utils'
 
 /** Provides theme object in component context */
