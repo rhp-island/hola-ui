@@ -1,13 +1,14 @@
-const { writeFileSync, appendFileSync } = require("fs")
-const { resolve } = require("path")
+const { writeFileSync, appendFileSync } = require('fs')
+const { resolve } = require('path')
 const {
   name: pkgName,
   version: pkgVersion,
-} = require("../packages/core/package.json")
+} = require('../packages/core/package.json')
 
-const { ESLint } = require("eslint")
-const { domElements } = require("@hola-ui/vue-system")
-const HolaComponents = require("@hola-ui/vue-next")
+const { ESLint } = require('eslint')
+// const { domElements } = require('@hola-ui/vue-system')
+const domElements = []
+const HolaComponents = require('@hola-ui/vue-next')
 
 type ComponentsImport = typeof HolaComponents
 
@@ -20,10 +21,10 @@ async function generateComponents() {
      * we only generate types for components.
      */
     if (
-      component.startsWith("C") &&
+      component.startsWith('C') &&
       HolaComponents[component]?.name &&
       HolaComponents[component]?.setup &&
-      typeof HolaComponents[component]?.setup === "function"
+      typeof HolaComponents[component]?.setup === 'function'
     ) {
       code += `${component}: typeof import('${pkgName}')['${component}']\n`
     }
@@ -155,13 +156,13 @@ async function generateComponents() {
   `
 
   // Write files
-  const projectTypesFilePath = resolve(__dirname, "../components.d.ts")
+  const projectTypesFilePath = resolve(__dirname, '../components.d.ts')
   const coreTypesFilePath = resolve(
     __dirname,
-    "../packages/core/dist/declarations/src/index.d.ts"
+    '../packages/core/dist/declarations/src/index.d.ts'
   )
-  writeFileSync(projectTypesFilePath, allTypes, "utf8")
-  appendFileSync(coreTypesFilePath, allTypes, "utf8")
+  writeFileSync(projectTypesFilePath, allTypes, 'utf8')
+  appendFileSync(coreTypesFilePath, allTypes, 'utf8')
 
   // Lint and Fix file after writing types
   const eslint = new ESLint({ fix: true })
@@ -174,9 +175,9 @@ async function generateComponents() {
 
 try {
   generateComponents()
-  console.info("✅ Successfully wrote component types\n")
+  console.info('✅ Successfully wrote component types\n')
 } catch (error) {
-  console.error("Error: writing types\n", error)
+  console.error('Error: writing types\n', error)
 }
 
 export {}

@@ -1,5 +1,5 @@
-import { ComputedRef, Ref, VNodeProps } from "vue"
-import { TemplateRef } from "./dom"
+import { ComputedRef, Ref, VNodeProps } from 'vue'
+import { TemplateRef } from './dom'
 
 /**
  * Value may or may not be a `ref`.
@@ -24,3 +24,17 @@ export interface MergedVNodeProps extends VNodeProps {
  * Any function
  */
 export type Fn = () => void
+
+export type Dict<T = any> = Record<string, T>
+
+export type UnionStringArray<T extends Readonly<string[]>> = T[number]
+
+export type AnyFunction<T = any> = (...args: T[]) => any
+
+export type FunctionArguments<T extends Function> = T extends (
+  ...args: infer R
+) => any
+  ? R
+  : never
+
+export type Omit<T, K> = Pick<T, Exclude<keyof T, K>>

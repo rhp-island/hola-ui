@@ -8,7 +8,7 @@
       "dom.iterable",
       "vue",
       "jest",
-      "components.d.ts",
+      // "components.d.ts",
       "env.d.ts"
     ],
     "lib": ["dom", "esnext"],
@@ -31,7 +31,7 @@
     "declarationMap": true
   },
   "include": [
-    "./components.d.ts",
+    // "./components.d.ts",
     "packages/**/*.ts",
     "packages/**/*.tsx",
     "packages/*.tsx",

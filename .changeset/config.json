@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@1.5.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "rhp-island/hola-ui" }
+  ],
+  "commit": false,
+  "linked": [],
+  "access": "public",
+  "baseBranch": "refs/develop",
+  "updateInternalDependencies": "patch",
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
+  },
+  "ignore": []
+}

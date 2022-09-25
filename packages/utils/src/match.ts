@@ -9,7 +9,7 @@ export function match<T extends string | number = string, U = unknown>(
 ): U {
   if (value in lookup) {
     let returnValue = lookup[value]
-    return typeof returnValue === "function"
+    return typeof returnValue === 'function'
       ? returnValue(...args)
       : returnValue
   }
@@ -19,9 +19,9 @@ export function match<T extends string | number = string, U = unknown>(
       lookup
     )
       .map((key) => `"${key}"`)
-      .join(", ")}.`
+      .join(', ')}.`
   )
-  /** @ts-expect-error "captureStackTrace" not in default Error constuctor typee  */
+
   if (Error?.captureStackTrace) Error.captureStackTrace(error, match)
   throw error
 }

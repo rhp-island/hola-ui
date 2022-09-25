@@ -6,9 +6,9 @@ import {
   ref,
   unref,
   UnwrapRef,
-} from "vue"
-import { debounce } from "./timers"
-import { MaybeRef } from "./types"
+} from 'vue'
+import { debounce } from './timers'
+import { MaybeRef } from './types'
 
 /**
  * Interface for node provided by template ref
@@ -127,4 +127,26 @@ export function contains(containers: Set<HTMLElement>, element: HTMLElement) {
   }
 
   return false
+}
+
+export function isElement(el: any): el is Element {
+  return (
+    el != null &&
+    typeof el == 'object' &&
+    'nodeType' in el &&
+    el.nodeType === Node.ELEMENT_NODE
+  )
+}
+
+export function isHTMLElement(el: any): el is HTMLElement {
+  if (!isElement(el)) {
+    return false
+  }
+
+  const win = el.ownerDocument.defaultView ?? window
+  return el instanceof win.HTMLElement
+}
+
+export function getOwnerDocument(node?: Element | null): Document {
+  return isElement(node) ? node.ownerDocument ?? document : document
 }

@@ -1,0 +1,32 @@
+{
+  "name": "@hola-ui/styled-system",
+  "version": "0.1.1-alpha.0",
+  "main": "dist/hola-ui-styled-system.cjs.js",
+  "module": "dist/hola-ui-styled-system.esm.js",
+  "description": "Hola UI Vue | Styled System module",
+  "repository": "https://github.com/rhp-island/hola-ui/tree/master/packages/styled-system",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/hola-ui-styled-system.cjs.js",
+      "default": "./dist/hola-ui-styled-system.esm.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@hola-ui/utils": "^0.1.0-alpha.13",
+    "csstype": "3.0.9"
+  },
+  "devDependencies": {
+    "vue": "^3.2.37"
+  },
+  "peerDependencies": {
+    "vue": "^3.1.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

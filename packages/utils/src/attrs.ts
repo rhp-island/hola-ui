@@ -1,23 +1,23 @@
-import camelCase from "lodash.camelcase"
-import { StyleObjectOrFn, isStyleProp } from "@hola-ui/styled-system"
-import { HTMLAttributes } from "vue"
-import memoize from "lodash.memoize"
+import camelCase from 'lodash.camelcase'
+import { StyleObjectOrFn, isStyleProp } from '@hola-ui/styled'
+import { HTMLAttributes } from 'vue'
+import memoize from 'lodash.memoize'
 
-export type StyleAndHTMLAttibutes = StyleObjectOrFn &
+export type StyleAndHTMLAttributes = StyleObjectOrFn &
   Record<string, string | number | boolean | unknown> &
   HTMLAttributes
 
 interface ExtractedStyleAttrs {
-  styles: Partial<StyleAndHTMLAttibutes>
+  styles: Partial<StyleAndHTMLAttributes>
   attrs: Partial<HTMLAttributes>
 }
 
 const camelCaseCache: any = {}
 const _isStyledProp = memoize((attr) => isStyleProp(attr))
 
-/** Extracts CSS style properties and HTML attributes from merged component attributs */
+/** Extracts CSS style properties and HTML attributes from merged component attributes */
 export const extractStyleAttrs = <
-  T extends StyleAndHTMLAttibutes,
+  T extends StyleAndHTMLAttributes,
   U extends Partial<HTMLAttributes> | Record<string, string | number | boolean>
 >(
   styleProps: T
@@ -30,7 +30,7 @@ export const extractStyleAttrs = <
     if (camelCaseCache[prop]) {
       _attr = camelCaseCache[prop]
     } else {
-      _attr = `${prop.startsWith("_") ? "_" : ""}${camelCase(prop)}`
+      _attr = `${prop.startsWith('_') ? '_' : ''}${camelCase(prop)}`
       camelCaseCache[prop] = _attr
     }
 

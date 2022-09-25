@@ -3,7 +3,7 @@
 // Credit:
 // Adapted from the good folks at @headlessui/vue
 
-import { getAllFocusable } from "@hola-ui/utils"
+import { getAllFocusable } from './dom-query'
 
 export enum Focus {
   /** Focus the first non-disabled element */
@@ -63,7 +63,7 @@ export function focusIn(container: HTMLElement | HTMLElement[], focus: Focus) {
     if (focus & (Focus.Previous | Focus.Last)) return Direction.Previous
 
     throw new Error(
-      "Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last"
+      'Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last'
     )
   })()
 
@@ -74,7 +74,7 @@ export function focusIn(container: HTMLElement | HTMLElement[], focus: Focus) {
     if (focus & Focus.Last) return elements.length - 1
 
     throw new Error(
-      "Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last"
+      'Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last'
     )
   })()
 
@@ -112,7 +112,7 @@ export function focusIn(container: HTMLElement | HTMLElement[], focus: Focus) {
   // then the active element (document.activeElement) is this anchor, which is expected.
   // However in that case the default focus styles are not applied *unless* you
   // also add this tabindex.
-  if (!next.hasAttribute("tabindex")) next.setAttribute("tabindex", "0")
+  if (!next.hasAttribute('tabindex')) next.setAttribute('tabindex', '0')
 
   return FocusResult.Success
 }

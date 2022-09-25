@@ -1,0 +1,40 @@
+{
+  "name": "@hola-ui/styled",
+  "version": "0.4.0-alpha.3",
+  "main": "dist/hola-ui-styled.cjs.js",
+  "module": "dist/hola-ui-styled.esm.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/hola-ui-styled.cjs.js",
+      "default": "./dist/hola-ui-styled.esm.js"
+    }
+  },
+  "description": "hola UI Vue | Styled module",
+  "repository": "https://github.com/rhp-island/hola-ui/tree/master/packages/styled",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@hola-ui/utils": "^0.1.0-alpha.12",
+    "@emotion/cache": "^11.7.1",
+    "@emotion/css": "^11.7.1",
+    "@emotion/serialize": "^1.0.2",
+    "@emotion/utils": "^1.1.0",
+    "@emotion/weak-memoize": "^0.2.5",
+    "clsx": "^1.1.1",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.memoize": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/lodash.memoize": "^4.1.6",
+    "vue": "^3.2.37"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.31"
+  }
+}
