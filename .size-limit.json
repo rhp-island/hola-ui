@@ -1,0 +1,18 @@
+[
+  {
+    "path": "packages/core/dist/hola-ui.cjs.prod.js",
+    "limit": "86 KB",
+    "ignore": [
+      "vue",
+      "@emotion/css"
+    ]
+  },
+  {
+    "path": "packages/core/dist/hola-ui.esm.js",
+    "limit": "85 KB",
+    "ignore": [
+      "vue",
+      "@emotion/css"
+    ]
+  }
+]

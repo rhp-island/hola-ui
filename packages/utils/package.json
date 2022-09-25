@@ -1,0 +1,39 @@
+{
+  "name": "@hola-ui/utils",
+  "version": "0.1.0-alpha.10",
+  "main": "dist/hola-ui-vue-utils.cjs.js",
+  "module": "dist/hola-ui-vue-utils.esm.js",
+  "description": "Hola UI Vue | Utils module",
+  "repository": "https://github.com/rhp-island/hola-ui/tree/master/packages/utils",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/hola-ui-vue-utils.cjs.js",
+      "default": "./dist/hola-ui-vue-utils.esm.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@types/lodash.camelcase": "^4.3.6",
+    "@types/lodash.memoize": "^4.1.6",
+    "css-box-model": "1.2.1",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.memoize": "^4.1.2",
+    "lodash.mergewith": "^4.6.2",
+    "object-assign": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/lodash.mergewith": "^4.6.6",
+    "@types/object-assign": "4.0.30",
+    "vue": "^3.2.37"
+  },
+  "peerDependencies": {
+    "vue": "^3.1.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

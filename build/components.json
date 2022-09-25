@@ -1,0 +1,1384 @@
+{
+  "HReset": {},
+  "HAlert": {
+    "name": "HAlert",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "status": {
+        "type": [
+          null
+        ],
+        "default": "info"
+      },
+      "colorScheme": {
+        "type": [
+          null
+        ]
+      },
+      "styleConfig": {
+        "type": [
+          null
+        ]
+      },
+      "variant": {
+        "type": [
+          null
+        ],
+        "default": "solid"
+      }
+    }
+  },
+  "HAlertDescription": {
+    "name": "HAlertDescription"
+  },
+  "HAlertIcon": {
+    "name": "HAlertIcon",
+    "props": {
+      "icon": {
+        "type": [
+          null
+        ]
+      }
+    }
+  },
+  "HAlertTitle": {
+    "name": "HAlertTitle"
+  },
+  "HBreadcrumb": {
+    "name": "HBreadcrumb",
+    "props": {
+      "separator": {
+        "type": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "default": "/"
+      },
+      "spacing": {
+        "type": [
+          null,
+          null,
+          null
+        ],
+        "default": "0.5rem"
+      },
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "nav"
+      }
+    }
+  },
+  "HBreadcrumbItem": {
+    "name": "HBreadcrumbItem",
+    "props": {
+      "separator": {
+        "type": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "default": "/"
+      },
+      "spacing": {
+        "type": [
+          null,
+          null,
+          null
+        ],
+        "default": "0.5rem"
+      },
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "nav"
+      }
+    }
+  },
+  "HBreadcrumbLink": {
+    "name": "HBreadcrumbLink",
+    "props": {}
+  },
+  "HBreadcrumbSeparator": {
+    "name": "HBreadcrumbSeparator",
+    "props": {
+      "spacing": {
+        "type": [
+          null,
+          null,
+          null
+        ],
+        "default": "0.5rem"
+      }
+    }
+  },
+  "HButton": {
+    "name": "HButton",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "button"
+      },
+      "iconSpacing": {
+        "type": [
+          null,
+          null,
+          null
+        ],
+        "default": "0.5rem"
+      }
+    }
+  },
+  "HButtonGroup": {
+    "name": "HButtonGroup",
+    "props": {
+      "spacing": {
+        "type": [
+          null,
+          null,
+          null
+        ],
+        "default": 3
+      }
+    }
+  },
+  "HIconButton": {
+    "name": "HIconButton",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "button"
+      },
+      "iconSpacing": {
+        "type": [
+          null,
+          null,
+          null
+        ],
+        "default": "0.5rem"
+      },
+      "ariaLabel": {
+        "required": true
+      }
+    }
+  },
+  "HCloseButton": {
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "button"
+      },
+      "isDisabled": {
+        "type": [
+          null
+        ],
+        "default": false
+      },
+      "size": [
+        null
+      ],
+      "styleConfig": [
+        null
+      ]
+    }
+  },
+  "HCode": {
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "code"
+      }
+    }
+  },
+  "HFlex": {
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "align": [
+        null,
+        null,
+        null
+      ],
+      "justify": [
+        null,
+        null,
+        null
+      ],
+      "wrap": [
+        null,
+        null,
+        null
+      ],
+      "direction": {
+        "type": [
+          null,
+          null,
+          null
+        ],
+        "default": "row"
+      },
+      "basis": [
+        null,
+        null,
+        null
+      ],
+      "grow": [
+        null,
+        null,
+        null
+      ],
+      "shrink": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "HFocusLock": {
+    "name": "HFocusLock",
+    "emits": [
+      "activate",
+      "deactivate"
+    ],
+    "props": {
+      "finalFocusRef": [
+        null,
+        null,
+        null
+      ],
+      "initialFocusRef": [
+        null,
+        null,
+        null
+      ],
+      "autoFocus": {
+        "default": true
+      },
+      "escapeDeactivates": {
+        "default": false
+      },
+      "clickOutsideDeactivates": {
+        "default": false
+      },
+      "allowOutsideClick": {
+        "default": false
+      },
+      "restoreFocus": {
+        "default": true
+      }
+    }
+  },
+  "HFormControl": {
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      }
+    }
+  },
+  "HFormErrorIcon": {
+    "name": "HFormErrorIcon",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "svg"
+      },
+      "name": {
+        "type": [
+          null
+        ]
+      },
+      "size": {
+        "type": [
+          null
+        ],
+        "default": "1em"
+      }
+    }
+  },
+  "HFormErrorMessage": {
+    "name": "HFormErrorMessage",
+    "props": {}
+  },
+  "HFormHelperText": {
+    "name": ""
+  },
+  "HFormLabel": {
+    "name": "HFormLabel",
+    "props": {}
+  },
+  "HRequiredIndicator": {
+    "name": "HRequiredIndicator"
+  },
+  "HIcon": {
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "svg"
+      },
+      "name": {
+        "type": [
+          null
+        ]
+      },
+      "size": {
+        "type": [
+          null
+        ],
+        "default": "1em"
+      }
+    }
+  },
+  "HInput": {
+    "name": "HInput",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "input"
+      },
+      "modelValue": [
+        null
+      ],
+      "focusBorderColor": [
+        null,
+        null,
+        null
+      ],
+      "isFullWidth": [
+        null,
+        null
+      ],
+      "errorBorderColor": [
+        null,
+        null,
+        null
+      ]
+    },
+    "emits": [
+      "update:modelValue",
+      "input",
+      "change"
+    ]
+  },
+  "HAspectRatio": {
+    "name": "HAspectRatio",
+    "props": {
+      "ratio": {
+        "type": [
+          null
+        ],
+        "default": 1.3333333333333333
+      }
+    }
+  },
+  "HBadge": {
+    "name": "HBadge",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      }
+    }
+  },
+  "HBox": {
+    "name": "HBox",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      }
+    }
+  },
+  "HCenter": {
+    "name": "HCenter",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      }
+    }
+  },
+  "HCircle": {
+    "name": "HCircle"
+  },
+  "HContainer": {
+    "name": "HContainer",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "centerContent": {
+        "type": [
+          null
+        ]
+      }
+    }
+  },
+  "HDivider": {
+    "name": "HDivider",
+    "props": {
+      "orientation": {
+        "type": [
+          null
+        ],
+        "default": "horizontal"
+      }
+    }
+  },
+  "HGrid": {
+    "name": "HGrid",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "templateColumns": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "rowGap": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "columnGap": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "autoFlow": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "autoRows": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "autoColumns": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "templateRows": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "templateAreas": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "area": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "column": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "row": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "HGridItem": {
+    "name": "HGridItem",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "colSpan": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "colStart": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "colEnd": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "rowStart": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "rowEnd": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "rowSpan": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "HHStack": {
+    "name": "HHStack",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "align": [
+        null,
+        null,
+        null
+      ],
+      "justify": [
+        null,
+        null,
+        null
+      ],
+      "wrap": [
+        null,
+        null,
+        null
+      ],
+      "spacing": {
+        "type": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "default": "0.5rem"
+      },
+      "direction": [
+        null,
+        null,
+        null
+      ],
+      "divider": [
+        null,
+        null
+      ],
+      "shouldWrapChildren": [
+        null
+      ],
+      "isInline": [
+        null
+      ]
+    }
+  },
+  "HHeading": {
+    "name": "HHeading",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "h2"
+      }
+    }
+  },
+  "HKbd": {
+    "name": "HKbd",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "h2"
+      }
+    }
+  },
+  "HLink": {
+    "name": "HLink",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "a"
+      }
+    }
+  },
+  "HLinkBox": {
+    "name": "HLinkBox",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      }
+    }
+  },
+  "HLinkOverlay": {
+    "name": "HLinkOverlay",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "a"
+      }
+    }
+  },
+  "HList": {
+    "name": "HList",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "ul"
+      },
+      "styleType": {
+        "type": [
+          null,
+          null,
+          null
+        ],
+        "default": "none"
+      },
+      "stylePosition": [
+        null,
+        null,
+        null
+      ],
+      "spacing": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "HListIcon": {
+    "name": "HListIcon"
+  },
+  "HListItem": {
+    "name": "HListItem"
+  },
+  "HOrderedList": {
+    "name": "HOrderedList"
+  },
+  "HSimpleGrid": {
+    "name": "HSimpleGrid",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "ul"
+      },
+      "minChildWidth": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "columns": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "spacing": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "spacingX": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "spacingY": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "HSpacer": {
+    "name": "HSpacer"
+  },
+  "HSquare": {
+    "name": "HSquare",
+    "props": {
+      "size": [
+        null,
+        null,
+        null
+      ],
+      "centerContent": {
+        "type": [
+          null
+        ],
+        "default": true
+      }
+    }
+  },
+  "HStack": {
+    "name": "HStack",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "align": [
+        null,
+        null,
+        null
+      ],
+      "justify": [
+        null,
+        null,
+        null
+      ],
+      "wrap": [
+        null,
+        null,
+        null
+      ],
+      "spacing": {
+        "type": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "default": "0.5rem"
+      },
+      "direction": [
+        null,
+        null,
+        null
+      ],
+      "divider": [
+        null,
+        null
+      ],
+      "shouldWrapChildren": [
+        null
+      ],
+      "isInline": [
+        null
+      ]
+    }
+  },
+  "HStackDivider": {
+    "name": "HStackDivider",
+    "inheritAttrs": false
+  },
+  "HStackItem": {
+    "name": "HStackItem"
+  },
+  "HText": {
+    "name": "HText",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "p"
+      },
+      "align": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "decoration": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "casing": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "HUnorderedList": {
+    "name": "HUnorderedList"
+  },
+  "HVStack": {
+    "name": "HVStack",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "align": [
+        null,
+        null,
+        null
+      ],
+      "justify": [
+        null,
+        null,
+        null
+      ],
+      "wrap": [
+        null,
+        null,
+        null
+      ],
+      "spacing": {
+        "type": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "default": "0.5rem"
+      },
+      "direction": [
+        null,
+        null,
+        null
+      ],
+      "divider": [
+        null,
+        null
+      ],
+      "shouldWrapChildren": [
+        null
+      ],
+      "isInline": [
+        null
+      ]
+    }
+  },
+  "HWrap": {
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "spacing": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "justify": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "align": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "direction": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "shouldWrapChildren": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "HWrapItem": {},
+  "HAlertDialog": {
+    "name": "HAlertDialog",
+    "props": {
+      "modelValue": {
+        "default": false
+      },
+      "closeOnOverlayClick": {
+        "default": true
+      },
+      "closeOnEsc": {
+        "default": true
+      },
+      "useInert": {
+        "default": true
+      },
+      "autoFocus": {
+        "default": true
+      },
+      "trapFocus": {
+        "default": true
+      },
+      "initialFocusRef": [
+        null,
+        null,
+        null
+      ],
+      "finalFocusRef": [
+        null,
+        null,
+        null
+      ],
+      "returnFocusOnClose": {
+        "default": true
+      },
+      "blockScrollOnMount": {
+        "default": true
+      },
+      "scrollBehaviour": {
+        "default": "outside"
+      },
+      "motionPreset": {
+        "default": "scale"
+      },
+      "onUpdate:modelValue": {},
+      "label": {
+        "default": "modal"
+      },
+      "leastDestructiveRef": [
+        null,
+        null
+      ]
+    },
+    "emits": [
+      "update:modelValue",
+      "close",
+      "escape"
+    ]
+  },
+  "HAlertDialogBody": {
+    "name": "HModalBody"
+  },
+  "HAlertDialogCloseButton": {
+    "name": "HModalCloseButton",
+    "emits": [
+      "click"
+    ]
+  },
+  "HAlertDialogContent": {
+    "name": "HAlertDialogContent",
+    "inheritAttrs": false
+  },
+  "HAlertDialogFooter": {
+    "name": "HModalFooter"
+  },
+  "HAlertDialogHeader": {
+    "name": "HModalHeader"
+  },
+  "HAlertDialogOverlay": {
+    "name": "HModalOverlay"
+  },
+  "HDrawer": {
+    "name": "HDrawer",
+    "props": {
+      "modelValue": {
+        "default": false
+      },
+      "closeOnOverlayClick": {
+        "default": true
+      },
+      "closeOnEsc": {
+        "default": true
+      },
+      "useInert": {
+        "default": true
+      },
+      "autoFocus": {
+        "default": true
+      },
+      "trapFocus": {
+        "default": true
+      },
+      "initialFocusRef": [
+        null,
+        null,
+        null
+      ],
+      "finalFocusRef": [
+        null,
+        null,
+        null
+      ],
+      "returnFocusOnClose": {
+        "default": true
+      },
+      "blockScrollOnMount": {
+        "default": true
+      },
+      "scrollBehaviour": {
+        "default": "outside"
+      },
+      "motionPreset": {
+        "default": "scale"
+      },
+      "onUpdate:modelValue": {},
+      "label": {
+        "default": "modal"
+      },
+      "placement": {
+        "default": "right"
+      }
+    },
+    "emits": [
+      "update:modelValue",
+      "close",
+      "escape"
+    ]
+  },
+  "HDrawerBody": {
+    "name": "HModalBody"
+  },
+  "HDrawerCloseButton": {
+    "name": "HModalCloseButton",
+    "emits": [
+      "click"
+    ]
+  },
+  "HDrawerContent": {
+    "name": "HDrawerContent",
+    "inheritAttrs": false,
+    "emits": [
+      "click",
+      "mousedown",
+      "keydown"
+    ]
+  },
+  "HDrawerFooter": {
+    "name": "HModalFooter"
+  },
+  "HDrawerHeader": {
+    "name": "HModalHeader"
+  },
+  "HDrawerOverlay": {
+    "name": "HModalOverlay"
+  },
+  "HModal": {
+    "name": "HModal",
+    "props": {
+      "modelValue": {
+        "default": false
+      },
+      "closeOnOverlayClick": {
+        "default": true
+      },
+      "closeOnEsc": {
+        "default": true
+      },
+      "useInert": {
+        "default": true
+      },
+      "autoFocus": {
+        "default": true
+      },
+      "trapFocus": {
+        "default": true
+      },
+      "initialFocusRef": [
+        null,
+        null,
+        null
+      ],
+      "finalFocusRef": [
+        null,
+        null,
+        null
+      ],
+      "returnFocusOnClose": {
+        "default": true
+      },
+      "blockScrollOnMount": {
+        "default": true
+      },
+      "scrollBehaviour": {
+        "default": "outside"
+      },
+      "motionPreset": {
+        "default": "scale"
+      },
+      "onUpdate:modelValue": {},
+      "label": {
+        "default": "modal"
+      }
+    },
+    "emits": [
+      "update:modelValue",
+      "escape",
+      "closeModal"
+    ]
+  },
+  "HModalBody": {
+    "name": "HModalBody"
+  },
+  "HModalCloseButton": {
+    "name": "HModalCloseButton",
+    "emits": [
+      "click"
+    ]
+  },
+  "HModalContent": {
+    "name": "HModalContent",
+    "inheritAttrs": false,
+    "emits": [
+      "click",
+      "mousedown",
+      "keydown"
+    ]
+  },
+  "HModalFooter": {
+    "name": "HModalFooter"
+  },
+  "HModalHeader": {
+    "name": "HModalHeader"
+  },
+  "HModalOverlay": {
+    "name": "HModalOverlay"
+  },
+  "HAnimatePresence": {
+    "name": "HAnimatePresence",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "type": {
+        "default": "fade"
+      }
+    },
+    "emits": [
+      "leave",
+      "beforeLeave"
+    ]
+  },
+  "HCollapse": {
+    "name": "HCollapse",
+    "props": {
+      "isOpen": {
+        "default": true
+      },
+      "animateOpacity": {
+        "default": true
+      },
+      "startingHeight": {
+        "default": 0
+      },
+      "endingHeight": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "auto"
+      },
+      "unmountOnExit": {
+        "default": true
+      }
+    },
+    "emits": [
+      "entered",
+      "left"
+    ]
+  },
+  "HMotion": {
+    "name": "HMotion",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "type": {
+        "default": "fade"
+      }
+    }
+  },
+  "HPortal": {
+    "name": "HPortal",
+    "props": {}
+  },
+  "HSpinner": {
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      },
+      "emptyColor": {
+        "default": "transparent"
+      },
+      "thickness": {
+        "default": "2px"
+      },
+      "speed": {
+        "default": "0.45s"
+      },
+      "color": {},
+      "label": {}
+    }
+  },
+  "HScrollLock": {
+    "name": "HScrollLock",
+    "props": {
+      "enabled": {
+        "default": false
+      }
+    }
+  },
+  "HVisuallyHidden": {
+    "name": "hola-factory-span",
+    "inheritAttrs": false,
+    "props": {
+      "as": [
+        null,
+        null
+      ],
+      "noOfLines": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "HVisuallyHiddenInput": {
+    "name": "hola-factory-input",
+    "inheritAttrs": false,
+    "props": {
+      "as": [
+        null,
+        null
+      ],
+      "noOfLines": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  }
+}
